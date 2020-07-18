@@ -37,11 +37,11 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 Text(
                                     "Добро пожаловать в новый",
-                                    style: TextStyle(fontSize: 15, color: Colors.white70) ),
+                                    style: TextStyle(fontSize: 17, color: Colors.white70, fontFamily: 'Roboto_Medium') ),
                                 SizedBox(height: 3),
                                 Text(
                                     "Курс для инвесторов",
-                                    style: TextStyle(fontSize: 28, color: Colors.white)),
+                                    style: TextStyle(fontSize: 28, color: Colors.white, fontFamily: 'Roboto_Black')),
                               ],
                             )
                           ],
@@ -64,8 +64,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         SizedBox(width: 40,),
                         Text(
-                            "Курс для инвесторов",
-                            style: TextStyle(fontSize: 22, color: Colors.black)),
+                            "Бесплатные вводные курсы",
+                            style: TextStyle(fontSize: 22, color: Colors.black, fontFamily: 'Roboto_Medium')),
                       ],
                     ),
                   ),
@@ -97,11 +97,11 @@ class HomeScreen extends StatelessWidget {
                                         SizedBox(height: 50,),
                                         Text(
                                             freeTitles[0].toString(),
-                                            style: TextStyle(fontSize: 28, color: Colors.white)),
+                                            style: TextStyle(fontSize: 36, color: Colors.white, fontFamily: 'Roboto_Black')),
                                         SizedBox(height: 10,),
                                         Text(
-                                            "Какое-то название",
-                                            style: TextStyle(fontSize: 20, color: Colors.white)),
+                                            "Какое-то описание курса",
+                                            style: TextStyle(fontSize: 20, color: Colors.white, fontFamily: 'Roboto_Medium')),
 
                                       ],
 
@@ -137,21 +137,19 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-
                         Container(
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image:  AssetImage(images[1]),
                                     fit: BoxFit.fill)))
-
-
                       ],
                       loop: false,
                       viewportFraction: 0.8,
                       scale: 0.9,
                     )
                   ),
-                )
+                ),
+                
               ],
             ),
           )
