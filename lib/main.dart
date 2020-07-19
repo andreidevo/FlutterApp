@@ -19,6 +19,8 @@ void main() => runApp(
       routes: {
         '/': (context) => HomePreloader(),
         '/home': (context) => HomeScreen(),
+        '/loader_home': (context) => HomePreloader(),
+
       },
     )
   )

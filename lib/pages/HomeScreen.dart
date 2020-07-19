@@ -27,8 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     list =  ModalRoute.of(context).settings.arguments;
 
-
-
     return Scaffold(
 
       body: Center(
