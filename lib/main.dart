@@ -16,7 +16,7 @@ void main() => runApp(
     home: MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => LessonScreen(),
         '/second': (context) => LessonScreen(),
       },
     )
