@@ -19,18 +19,13 @@ class LessonScreen extends StatelessWidget {
             snap: false,
             expandedHeight: 50.0,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text('Урок 1', style: TextStyle(color: Colors.black),),
-
+              title: Text('Урок 1', style: TextStyle(color: Colors.white),),
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.black,
           ),
           SliverToBoxAdapter(
             child: SizedBox(
-
               child : _allText(context)
-
-
-
             ),
           ),
 
@@ -50,9 +45,12 @@ Widget _newText(BuildContext context, String type)
       break;
 
     case "text":
-      return RichText(
-        textAlign: TextAlign.justify,
-        text: TextSpan(text: data, style: TextStyle(color: Colors.black))
+      return Align(
+        alignment: Alignment.topLeft,
+        child: RichText(
+          textAlign: TextAlign.justify,
+          text: TextSpan(text: data, style: TextStyle(color: Colors.black))
+        ),
       );
       break;
     case "idea":
