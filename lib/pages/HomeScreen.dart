@@ -12,23 +12,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child:
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 2,
 
-                  child: Container(
-                      width: double.infinity,
-                      child:
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+      body: Center(
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            children: [
+              Expanded(
+                flex: 1,
+
+                child: Container(
+                    width: double.infinity,
+                    child:
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
                         Row(
                           children: [
                             SizedBox(width: 40,),
@@ -48,18 +48,18 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],),
 
-                      decoration: BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Colors.black,
                       image: DecorationImage(
-                        image: AssetImage('assets/upper.png'),
-                        fit: BoxFit.cover),
-                      )
-                    ),
-                  ),
+                          image: AssetImage('assets/upper.png'),
+                          fit: BoxFit.cover),
+                    )
+                ),
+              ),
 
-                Expanded(
-                  flex: 6,
-                  child: Container(
+              Expanded(
+                flex: 6,
+                child: Container(
                     margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                     color: Colors.white,
                     child: ListView(
@@ -252,12 +252,14 @@ class HomeScreen extends StatelessWidget {
 
 
                       ],)
-                  ),
                 ),
+              ),
 
-              ],
-            ),
-          )
+            ],
+          ),
+        )
+
+
       ),
     );
   }
