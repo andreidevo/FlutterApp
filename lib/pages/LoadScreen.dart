@@ -6,6 +6,8 @@ import 'package:flutterapp/pages/HomeScreen.dart';
 import 'package:flutterapp/pages/LessonScreen.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
+import 'HomePreloader.dart';
+
 
 class LoadScreen extends StatelessWidget {
 
@@ -121,7 +123,7 @@ class LoadScreen extends StatelessWidget {
 
                   Navigator.push(
                     contexter,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => HomePreloader()));
 
                 },
                 child:

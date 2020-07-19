@@ -3,14 +3,32 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutterapp/pages/LessonScreen.dart';
+import 'package:http/http.dart';
+import 'dart:convert';
 
-class HomeScreen extends StatelessWidget {
+import 'LoadJsonMain.dart';
 
-  var images = ['assets/image1.png','assets/image2.png'];
-  var freeTitles = ['Урок 1', 'Урок 2'];
+
+class HomeScreen extends StatefulWidget {
+  //List<LessonsStruct> list;
+  //HomeScreen(this.list, {Key key}): super(key: key);
+
 
   @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  var images = ['assets/image1.png','assets/image2.png'];
+  List<LessonsStruct> list;
+  var freeTitles = ['Урок 1', 'Урок 2'];
+  @override
   Widget build(BuildContext context) {
+    list =  ModalRoute.of(context).settings.arguments;
+
+
+
     return Scaffold(
 
       body: Center(
@@ -87,12 +105,17 @@ class HomeScreen extends StatelessWidget {
                                   Container(
 
                                     decoration: BoxDecoration(
+
                                         image: DecorationImage(
+
                                             image:  AssetImage(images[0]),
-                                            fit: BoxFit.fill))
+                                            fit: BoxFit.fill)
+                                    )
                                     ,
                                     child: Stack(
                                       children: [
+
+
                                         Container(
                                           width: double.infinity,
                                           child: Row(
@@ -126,7 +149,13 @@ class HomeScreen extends StatelessWidget {
 
                                                 width: double.infinity,
                                                 child: RaisedButton(
-                                                  onPressed: (){},
+                                                  onPressed: (){
+
+                                                    // открываем урок
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(builder: (context) => LessonScreen()
+                                                    ));
+                                                  },
                                                   color: Colors.white,
                                                   shape: RoundedRectangleBorder(
                                                       borderRadius: BorderRadius.circular(10.0),
